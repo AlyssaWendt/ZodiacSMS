@@ -21,6 +21,8 @@
   "homepage": "https://github.com/AlyssaWendt/ZodiacSMS#readme",
   "dependencies": {
     "@vonage/server-sdk": "^2.11.2",
+    "axios": "^1.1.2",
+    "aztro-js": "^0.1.5",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",

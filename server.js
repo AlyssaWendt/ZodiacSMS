@@ -12,6 +12,7 @@ const morgan = require("morgan")
 //Port and establish DB Connection
 const PORT = process.env.PORT;
 const userController = require("./controller/user-controller")
+const scheduleController = require("./controller/schedule.js")
 const app = express()
 
 
@@ -34,6 +35,7 @@ app.get("/" ,(req, res)=>{
     res.send("Hello World")
 })
 app.use("/zodiacsms", userController);
+app.use("/zodiacsms", scheduleController);
 ///////////////////////////////
 // LISTENER
 ////////////////////////////////
