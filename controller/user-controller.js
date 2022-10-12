@@ -10,7 +10,7 @@ const client = require('twilio')(accountSid, authToken);
 router.post("/", async (req, res) =>{
     const name = req.body.name;
     const number = req.body.number.replace(/\D/g,'');
-    const sign = req.body.sign
+    const sign = req.body.sign.toLowerCase()
    
     const newUser = new User({
         name,
