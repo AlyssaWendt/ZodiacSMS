@@ -11,24 +11,40 @@ const aztroJs = require("aztro-js")
 
 
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
 	//for loop {
-    User.find({}, (err, allUsers) =>{
-        for(i = 0; i<allUsers.length; i++){
-            console.log(allUsers[i])
-            let horoscopeDesc
+        const allUsers = await User.find({})
+        console.log(allUsers)
+        for(i=0;i<allUsers.length; i++){
+              let horoscopeDesc
         const options = {
             method: 'POST',
             url: 'https://sameer-kumar-aztro-v1.p.rapidapi.com/',
-            params:{ sign:` ${allUsers[i].sign} `, day: 'today'},
+            params:{ sign: `${allUsers[i].sign}`, day: 'today'},
             headers: {
               'X-RapidAPI-Key': process.env.X_RapidAPI_Key,
               'X-RapidAPI-Host': process.env.X_RapidAPI_Host,
             }
           };
-          console.log(options.params)
-        }
-    })
+          console.log(options.params) 
+          await axios.request(options).then(function (response) {
+            horoscopeDesc = response.data.description
+            //console.log(horoscopeDesc)
+        }).catch(function (error) {
+            console.error(error);
+        });
+        client.messages
+    .create({
+       body: horoscopeDesc,
+       from: '+14255377759',
+       to: allUsers[i].number
+     })
+    .then(message => console.log(message.sid));
+
+
+		}
+     
+  
 })
         
 
