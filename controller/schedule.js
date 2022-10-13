@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
         const allUsers = await User.find({})
         console.log(allUsers)
         for(i=0;i<allUsers.length; i++){
-              let horoscopeDesc
+              
         const options = {
             method: 'POST',
             url: 'https://sameer-kumar-aztro-v1.p.rapidapi.com/',
@@ -35,22 +35,16 @@ router.get('/', async (req, res) => {
         });
         client.messages
     .create({
-       body: horoscopeDesc,
+       body: `Hello ${allUsers[i].name}, ${horoscopeDesc}`,
        from: '+14255377759',
        to: allUsers[i].number
      })
     .then(message => console.log(message.sid));
 
 
-		}
-     
+		}   
   
 })
         
-
-
-
-
-
 
 module.exports = router;
