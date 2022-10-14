@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
               'X-RapidAPI-Host': process.env.X_RapidAPI_Host,
             }
           };
-          console.log(options.params) 
+    
           await axios.request(options).then(function (response) {
             horoscopeDesc = response.data.description
             //console.log(horoscopeDesc)
