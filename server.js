@@ -35,7 +35,7 @@ app.get("/" ,(req, res)=>{
     res.send("Hello World")
 })
 app.use("/zodiacsms", userController);
-app.use("/zodiacsms", scheduleController);
+//app.use("/zodiacsms", scheduleController);
 ///////////////////////////////
 // LISTENER
 ////////////////////////////////
