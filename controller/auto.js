@@ -1,4 +1,3 @@
-const db = require("dotenv").config();
 const User = require("../models/User");
 require('../config/db.connection.js');
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
