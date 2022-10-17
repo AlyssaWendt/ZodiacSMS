@@ -13,7 +13,7 @@ The will start an a landing page with logo/link that they click on. From there u
 ![Imgur](https://i.imgur.com/VFjasct.png)
 
 ## Form Page
-![Imgur](https://i.imgur.com/VFjasct.png)
+![Imgur](https://i.imgur.com/mIk1fBj.png)
 
 
 ## ERD
