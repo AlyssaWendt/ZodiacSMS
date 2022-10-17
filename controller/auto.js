@@ -31,7 +31,7 @@ const options = {
 });
 client.messages
 .create({
-body: `Hello ${allUsers[i].name}, ${horoscopeDesc}`,
+body: `Hello ${allUsers[i].name}! ${horoscopeDesc}`,
 from: '+14255377759',
 to: allUsers[i].number
 })
