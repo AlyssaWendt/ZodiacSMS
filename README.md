@@ -40,8 +40,8 @@ MongoDB
           
 
 ## API
-aztro: https://github.com/sameerkumar18/aztro/blob/master/docs/source/index.rst
-twilio: https://www.twilio.com/docs/messaging/services
+* aztro: https://github.com/sameerkumar18/aztro/blob/master/docs/source/index.rst
+* twilio: https://www.twilio.com/docs/messaging/services
 
 I will be using two API for this application. One is aztro, which is for developers who wants an API that provides horoscope information. The second API is Twilio which has a couple of APIs that allow you to send and receive a high volume of SMS messages anywhere in the world.
 
